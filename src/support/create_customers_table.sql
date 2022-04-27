@@ -6,10 +6,6 @@ CREATE TABLE public.customers (
   	phone VARCHAR(255),
   	age INT DEFAULT 99
   	CHECK(age>=18),
-  	city VARCHAR(255),
-  	postal_code INT,
-  	CHECK(postal_code>0),
-  	country VARCHAR(255),
  	gdpr_set BOOLEAN NOT NULL,
   	is_active BOOLEAN NOT NULL,
   	created_time TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
