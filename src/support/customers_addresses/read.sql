@@ -21,17 +21,10 @@ AND state IS NULL
 ORDER BY address_id desc
 LIMIT 10;
 
---get addresses that have 4-digit postal code that end with 0.
+--get addresses that have 4-digit postal code that start with 3 and end with 7.
 --Order the result alphabetically by country and city from A to Z
 
 SELECT address, country, city, postal_code
 FROM public.customers_addresses
-WHERE cast(postal_code as text) LIKE   '%1__8%'
+WHERE cast(postal_code as text) LIKE  '3__7'
 ORDER BY country ASC, city ASC;
-
---get addresses that have 4-digit postal code that start with 1 and end with 8.
---Order the result alphabetically by country and city from Z to A
-SELECT address, country, city, postal_code
-FROM public.customers_addresses
-WHERE cast(postal_code as text) LIKE  '%0'
-ORDER BY country  DESC, city DESC;

@@ -9,7 +9,12 @@ INSERT INTO public.customers_addresses(address, city, province, postal_code, cou
 ('Drujba 1', 'Varna', 'Varna', 9000, 'Bulgaria'),
 ('ul.Dobrudja 22', 'Silistra', 'Silistra', 7500, 'Bulgaria'),
 ('bul.Yanko Komitov 6', 'Burgas', 'Burgas', 8000, 'Bulgaria'),
-('ул.Княз Александър I-ви', 'Plovdiv', 'Plovdiv', 4000, 'Bulgaria');
+('ул.Княз Александър I-ви', 'Plovdiv', 'Plovdiv', 4000, 'Bulgaria'),
+('test 123', 'Burgas', 'Burgas', 3117, 'Bulgaria'),
+('test 2', 'Plovdiv', 'Plovdiv', 3113, 'Bulgaria'),
+('test 3', 'Sozopol', 'Sozopol', 3997, 'Bulgaria'),
+('test 4', 'Pleven', 'Pleven', 3887, 'Bulgaria');
+
 
 --insert us customer addresses
 
