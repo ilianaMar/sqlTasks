@@ -7,8 +7,12 @@ SELECT DISTINCT country FROM public.customers_addresses ORDER BY country DESC;
 --get a list of cities that start with a specific letter (for example cities that start with letter S will return Sofia,
 --Sozopol etc)
 SELECT DISTINCT city FROM public.customers_addresses WHERE city LIKE 'S%' ORDER BY city ASC;
+
 --get 3 different random cities located in Bulgaria
-SELECT city FROM public.customers_addresses WHERE country = 'Bulgaria' ORDER BY RANDOM() LIMIT 3;
+SELECT city FROM
+  (SELECT DISTINCT city FROM public.customers_addresses WHERE country = 'Bulgaria') as cities
+ORDER BY random()
+Limit 3;
 
 --get a list of all addresses in Bulgaria outside of Sofia, Plovdiv, Varna
 SELECT address, city  FROM public.customers_addresses WHERE country = 'Bulgaria'
