@@ -14,3 +14,12 @@
 - READ data object(s) using SELECT
 - UPDATE data object using UPDATE and WHERE clause
 - DELETE data object using DELETE and WHERE clause
+
+### SQL: Views, Sorting and Filtering data
+- create view of table
+- sorting data via Order by 
+- filtering data
+
+### SQL: Aggregate Functions and Grouping data
+- Aggregate Functions: COUNT, AVG, SUM, MAX, MIN
+- Grouping data: GROUP BY, HAVING, GROUPING SETS
