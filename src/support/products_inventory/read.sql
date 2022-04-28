@@ -1,5 +1,5 @@
 --Get the count of all available products in stock
-SELECT COUNT(*) as available_products FROM public.products_inventory WHERE is_in_stock IS TRUE;
+SELECT SUM(available_quantity) as available_products FROM public.products_inventory WHERE is_in_stock IS TRUE;
 
 --Get the average product price with VAT for all categories
 --avg sum per category
@@ -33,13 +33,17 @@ GROUP BY product_type
 ORDER BY product_type ASC;
 
 --Get the count of all products for each category in and out of stock
-SELECT SUM(available_quantity) as available_products_per_category
+SELECT product_type, SUM(available_quantity) as available_products_per_category
 FROM public.products_inventory
-WHERE is_in_stock IS TRUE;
+WHERE is_in_stock IS TRUE
+GROUP BY product_type
+ORDER BY product_type ASC;
 
-SELECT SUM(available_quantity) as available_products_per_category
+SELECT product_type, SUM(available_quantity) as available_products_per_category
 FROM public.products_inventory
-WHERE is_in_stock IS FALSE;
+WHERE is_in_stock IS FALSE
+GROUP BY product_type
+ORDER BY product_type ASC;
 
 --Get the count of all products for each category where the products count is more than 3
 SELECT product_type, COUNT(*) as available_products_per_category
