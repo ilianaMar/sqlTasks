@@ -32,8 +32,7 @@ SELECT DISTINCT public.customers.customer_id, name
 FROM public.customers
 FULL JOIN public.orders
 ON public.customers.customer_id = public.orders.customer_id
-WHERE public.customers.is_active IS TRUE
-AND public.orders.customer_id is NULL
+WHERE public.orders.customer_id IS NULL
 ORDER BY public.customers.customer_id;
 
 -- all active users with orders
@@ -41,6 +40,6 @@ SELECT DISTINCT public.customers.customer_id, name
 FROM public.customers
 FULL JOIN public.orders
 ON public.customers.customer_id = public.orders.customer_id
-WHERE public.customers.is_active IS TRUE
+WHERE public.customers.is_active IS FALSE
 AND public.orders.customer_id IS NOT NULL
 ORDER BY public.customers.customer_id;
