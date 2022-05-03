@@ -16,7 +16,7 @@
 - DELETE data object using DELETE and WHERE clause
 
 ### SQL: Views, Sorting and Filtering data
-- create view of table
+- create view using CREATE VIEW statement
 - sorting data via Order by 
 - filtering data
 
