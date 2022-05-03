@@ -9,3 +9,8 @@ CREATE TABLE public.products_inventory (
     is_in_stock BOOLEAN NOT NULL,
     warehouse INT NOT NULL
 );
+
+ALTER TABLE public.products_inventory ADD COLUMN supplier_id INT;
+
+ALTER TABLE public.products_inventory ADD FOREIGN KEY (supplier_id) REFERENCES public.suppliers (id)
+ON DELETE cascade;

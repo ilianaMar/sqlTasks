@@ -29,8 +29,9 @@ CREATE INDEX idx_name ON public.customers(name);
 CREATE INDEX idx_phone ON public.customers(phone);
 CREATE INDEX idx_email ON public.customers(email);
 
+ALTER TABLE public.customers ADD COLUMN address_id INT UNIQUE NOT NULL;
 
-
+ALTER TABLE public.customers ADD FOREIGN KEY (address_id) REFERENCES public.customers_addresses (address_id);
 
 
 
