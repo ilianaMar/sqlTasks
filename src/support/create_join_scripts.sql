@@ -12,6 +12,7 @@ SELECT DISTINCT public.customers.customer_id, name
 FROM public.customers
 RIGHT JOIN public.orders
 ON public.customers.customer_id = public.orders.customer_id
+WHERE is_active IS TRUE
 ORDER BY public.customers.customer_id;
 
 
@@ -20,7 +21,8 @@ SELECT DISTINCT public.customers.customer_id, name
 FROM public.customers
 LEFT JOIN public.orders
 ON public.customers.customer_id = public.orders.customer_id
-WHERE public.orders.customer_id is NULL
+WHERE public.orders.customer_id IS NULL
+AND is_active IS TRUE
 ORDER BY public.customers.customer_id;
 
 
