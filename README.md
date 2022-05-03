@@ -23,3 +23,9 @@
 ### SQL: Aggregate Functions and Grouping data
 - Aggregate Functions: COUNT, AVG, SUM, MAX, MIN
 - Grouping data: GROUP BY, HAVING, GROUPING SETS
+
+### SQL: Joins, Subqueries and the UNION operator
+- SQL table relations
+- Foreign Key restraint
+- Joins(Inner, Self, Left and Right, Full Join)
+- UNION
